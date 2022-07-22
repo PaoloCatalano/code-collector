@@ -58,10 +58,10 @@ export default function Cards1() {
               </div>
             </div>
             <div className="card-1-content">
+              <h2 className="card-1-more-info">
+                MORE INFO &darr; &#8595; &#x2193; {/* ↓ */}
+              </h2>
               <div className="child">
-                <h2 className="card-1-more-info">
-                  MORE INFO &darr; &#8595; &#x2193; {/* ↓ */}
-                </h2>
                 <div className="content">{content}</div>
               </div>
             </div>
@@ -91,10 +91,10 @@ export default function Cards1() {
             </div>
           </div>
           <div className="card-1-content">
+          <h2 className="card-1-more-info">
+            MORE INFO ↓↓↓
+          </h2>
             <div className='child'>
-              <h2 className="card-1-more-info">
-                MORE INFO ↓↓↓
-              </h2>
               <div className='content'>{content}</div>
             </div>
           </div>
@@ -229,6 +229,7 @@ export default function Cards1() {
     }
     
     .card-1-content {
+      position: relative;
       height: 100%;
       width: 100%;
       display: grid;
@@ -255,11 +256,15 @@ export default function Cards1() {
       width: 0;
     }
     
-    .card-1-content .child h2 {
+    .card-1-content h2 {
       font-size: 1rem;
       color: #999;
-      text-align: center;
-      margin: 0;
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 59px;
+      display: grid;
+      place-items: center;
     }
     
     .card-1-content .child .content {
@@ -267,7 +272,7 @@ export default function Cards1() {
       padding-right: 4rem;
       // text-align: justify;
       opacity: 0;
-      transform: translateY(-64px);
+      transform: translateY(-45px);
       line-height: 1.2em;
       letter-spacing: 0.15em;
     
