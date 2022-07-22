@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
+
+$title-font: "Iceberg", cursive;
+$black: #12171a;
+$gray: #ddd;
+$js: #ffee32;
+$scss: #ff499e;
+$css: #55c1ff;
+$node: #20bf55;
+$jsx: #102e4a;
+$cmd: #2f4858;
+
+//linear-gradients
+$grad-red: linear-gradient(to bottom right, #ff512f, #dd2476);
+$grad-pink: linear-gradient(to bottom right, #ff61d2, #fe9090);
+$grad-green: linear-gradient(to bottom right, #72ffb6, #10d164);
+$grad-orange: linear-gradient(to bottom right, #fd8451, #ffbd6f);
+$grad-blue: linear-gradient(to bottom right, #00c0ff, #4218b8);
+$grad-blue-pink: linear-gradient(to bottom right, #0100ec, #fb36f4);
+$grad-violet: linear-gradient(to bottom right, #121c84, #8278da);
+$grad-madrid: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+$grad-nantes: linear-gradient(to bottom right, #009245, #fcee21);
+$grad-new-york: linear-gradient(to bottom right, #305170, #6dfc6b);
+$grad-west-ham: linear-gradient(to bottom right, #38a2d7, #561139);
+$grad-mercury: linear-gradient(to bottom right, #5761b2, #1fc5a8);
+
+$max-width: 1000px;
+$text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+
+* {
+  box-sizing: border-box;
+}
+::selection {
+  background: #ddd;
+  color: #000;
+}
+
+@mixin set-colors($bg, $text) {
+  background: $bg;
+  color: $text;
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin text-shadow {
+  text-shadow: $text-shadow;
+  color: lighten($black, 10%);
+}
+
+@mixin transition {
+  transition: all 0.4s ease-out;
+}

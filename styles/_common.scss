@@ -1,0 +1,51 @@
+.border {
+  border: 5px solid $black;
+}
+
+.limit {
+  border-bottom: 5px solid $black;
+  width: 75vw;
+  max-width: $max-width;
+  height: auto;
+  margin: 5rem auto;
+}
+
+.black-button {
+  width: fit-content;
+  display: block;
+  font-size: 2rem;
+  background: $black;
+  color: white;
+  padding: 0.7rem;
+  margin: 4rem auto;
+
+  &:hover {
+    background: lighten($black, 10%);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.white-button {
+  width: fit-content;
+  display: block;
+  font-size: 1.2rem;
+  color: $black;
+  background: white;
+  padding: 0.5rem;
+  margin: 2rem auto;
+
+  &:hover {
+    background: lighten($black, 10%);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.link {
+  @include text-shadow;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: line-through;
+  }
+}

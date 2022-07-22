@@ -1,0 +1,46 @@
+.main {
+  &__navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 1rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 1rem;
+
+    div {
+      display: flex;
+      align-items: flex-end;
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.15;
+    font-size: 3rem;
+    font-family: $title-font;
+    margin-bottom: 5rem;
+  }
+
+  &__title,
+  &__description {
+    text-align: center;
+  }
+
+  &__description {
+    margin: 4rem 0;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+}

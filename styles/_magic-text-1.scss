@@ -1,0 +1,75 @@
+.dixappear {
+  animation: colored 3s infinite linear;
+  color: hsl(0, 85%, 50%);
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-size: larger;
+}
+
+@keyframes colored {
+  0% {
+    color: hsl(0, 85%, 50%);
+  }
+  15% {
+    color: hsl(50, 85%, 50%);
+  }
+  30% {
+    color: hsl(100, 85%, 50%);
+  }
+  45% {
+    color: hsl(150, 85%, 50%);
+  }
+  60% {
+    color: hsl(200, 85%, 50%);
+  }
+  75% {
+    color: hsl(250, 85%, 50%);
+  }
+  100% {
+    color: hsl(300, 85%, 50%);
+  }
+}
+
+.colorful {
+  font-weight: normal;
+  color: inherit;
+
+  /* filter: opacity(0); */
+  animation: appear 7s infinite linear;
+}
+
+.colorful:nth-child(3n + 1) {
+  animation-delay: 100ms;
+}
+.colorful:nth-child(3n + 2) {
+  animation-delay: 200ms;
+}
+.colorful:nth-child(3n + 3) {
+  animation-delay: 300ms;
+}
+
+@keyframes appear {
+  0% {
+    color: #ddd;
+    /* filter: opacity(1); */
+  }
+  2% {
+    color: #fff;
+    /* filter: opacity(0); */
+  }
+  100% {
+    color: #fff;
+  }
+}
+.colorful:hover,
+.colorful:focus {
+  font-weight: 900;
+  filter: opacity(1) !important;
+  color: inherit;
+  animation: none;
+}
+.touched {
+  filter: opacity(1) !important;
+  color: inherit;
+  animation: none;
+}
