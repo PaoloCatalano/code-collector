@@ -29,7 +29,7 @@ export default function Modal({ isVisible, setVisibility }) {
       </div>
       <Link href="/projects">
         <a onClick={() => setVisibility(false)} className="main__modal__title">
-          <h2>{`-Proje<ts-`}</h2>
+          <h2 className="link">{`-Proje<ts-`}</h2>
         </a>
       </Link>
       <ol className="main__modal__links">
@@ -62,7 +62,7 @@ export default function Modal({ isVisible, setVisibility }) {
 
       <Link href="/credits">
         <a onClick={() => setVisibility(false)} className="main__modal__title">
-          <h2>{`-<redits-`}</h2>
+          <h2 className="link">{`-<redits-`}</h2>
         </a>
       </Link>
     </motion.div>

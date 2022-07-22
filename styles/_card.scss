@@ -112,7 +112,7 @@
   @include transition;
 }
 
-.card-1-content div {
+.card-1-content .child {
   overflow: scroll;
   border-radius: 0 0 3px 25px;
   background: white;
@@ -124,18 +124,23 @@
   @include transition;
 }
 
-.card-1-content div::-webkit-scrollbar {
+.card-1-content .child::-webkit-scrollbar {
   width: 0;
 }
 
-.card-1-content div h2 {
+.card-1-content .child h2 {
   font-size: 1rem;
   color: #999;
   text-align: center;
   margin: 0;
 }
 
-.card-1-content div p {
+.card-1-content .child .content {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   padding-top: 0.4rem;
   padding-right: 4rem;
   // text-align: justify;
@@ -147,7 +152,7 @@
   @include transition;
 }
 
-.card-1-content div p::first-letter {
+.card-1-content .child .content::first-letter {
   font-size: 130%;
 }
 
@@ -168,7 +173,7 @@
   transform: translateY(-90px);
 }
 
-.card:hover .card-1-content div p {
+.card:hover .card-1-content .child .content {
   opacity: 1;
 }
 
@@ -181,7 +186,7 @@
   height: 111%;
 }
 
-.card:hover .card-1-content div {
+.card:hover .card-1-content .child {
   height: 94%;
   box-shadow: none;
 }

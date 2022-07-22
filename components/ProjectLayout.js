@@ -1,6 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function ProjectLayout({ children, title, desc, styledTitle }) {
+  const router = useRouter();
+
+  const link = router.asPath;
+
   return (
     <>
       <Head>
@@ -13,7 +18,7 @@ export default function ProjectLayout({ children, title, desc, styledTitle }) {
       {children}
       <a
         className="black-button border"
-        href="http://www.github.com"
+        href={`https://github.com/PaoloCatalano/code-collector/blob/main/pages${link}.js`}
         target="_blank"
         rel="noopener noreferrer"
       >

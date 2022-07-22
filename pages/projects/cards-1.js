@@ -58,11 +58,11 @@ export default function Cards1() {
               </div>
             </div>
             <div className="card-1-content">
-              <div>
+              <div className="child">
                 <h2 className="card-1-more-info">
                   MORE INFO &darr; &#8595; &#x2193; {/* ↓ */}
                 </h2>
-                <p>{content}</p>
+                <div className="content">{content}</div>
               </div>
             </div>
           </article>
@@ -91,11 +91,11 @@ export default function Cards1() {
             </div>
           </div>
           <div className="card-1-content">
-            <div>
+            <div className='child'>
               <h2 className="card-1-more-info">
                 MORE INFO ↓↓↓
               </h2>
-              <p>{content}</p>
+              <div className='content'>{content}</div>
             </div>
           </div>
         </article>
@@ -240,7 +240,7 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content div {
+    .card-1-content .child {
       overflow: scroll;
       border-radius: 0 0 3px 25px;
       background: white;
@@ -251,18 +251,18 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content div::-webkit-scrollbar {
+    .card-1-content .child::-webkit-scrollbar {
       width: 0;
     }
     
-    .card-1-content div h2 {
+    .card-1-content .child h2 {
       font-size: 1rem;
       color: #999;
       text-align: center;
       margin: 0;
     }
     
-    .card-1-content div p {
+    .card-1-content .child .content {
       padding-top: 0.4rem;
       padding-right: 4rem;
       // text-align: justify;
@@ -274,7 +274,7 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content div p::first-letter {
+    .card-1-content .child .content::first-letter {
       font-size: 130%;
     }
     
@@ -296,7 +296,7 @@ export default function Cards1() {
       transform: translateY(-90px);
     }
     
-    .card:hover .card-1-content div p {
+    .card:hover .card-1-content .child .content {
       opacity: 1;
     }
     
@@ -309,7 +309,7 @@ export default function Cards1() {
       height: 111%;
     }
     
-    .card:hover .card-1-content div {
+    .card:hover .card-1-content .child {
       height: 94%;
       box-shadow: none;
     }
