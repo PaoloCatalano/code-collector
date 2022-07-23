@@ -201,6 +201,7 @@
 .card:hover .card-2-more-info {
   opacity: 0;
   transform: translate(60px, -90px);
+  height: 0;
 }
 
 .card:hover .card-2-content .child .content {
