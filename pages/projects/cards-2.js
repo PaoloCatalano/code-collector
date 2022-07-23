@@ -199,7 +199,7 @@ export default function Cards1() {
       color: white;
       opacity: 0;
     
-      transition: all 0.2s cubic-bezier(1, 0, 1, 0);
+      transition: all 0.2s cubic-bezier(1, 0.04, 1, 1.17);;
       transition-delay: 0.05s;
     }
     `}</CodeOf>
