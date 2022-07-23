@@ -3,30 +3,35 @@ import CodeOf from "../../components/CodeOf";
 import Link from "next/link";
 
 export default function Cards1() {
-  const title = "Cards / Page 1";
+  const title = "Cards / Page 2";
   const desc = "Different styles for creating Card Components";
-  const styledTitle = `-<ards - 1-`;
+  const styledTitle = `-<ards - 2-`;
 
   return (
     <ProjectLayout title={title} desc={desc} styledTitle={styledTitle}>
       <section className="card-container">
         {cards.map(({ title, subtitle, content }, index) => (
           <article key={index} className={`card card-color-${index + 1}`}>
-            <div className="card-1-number">{index + 1}</div>
-            <div className="card-1-header">
-              <div className="card-1-title">
+            <div className="card-2-number-header">{index + 1}</div>
+
+            <div className="card-2-header">
+              <div className="card-2-title">
                 <h1>{title}</h1>
                 <i>{subtitle}</i>
               </div>
-              <div className="card-1-side">
-                <div className="card-1-number-hole"></div>
-                <div className="card-1-placeholder"></div>
+              <div className="card-2-side">
+                <div className="card-2-number-hole"></div>
+                <div className="card-2-placeholder"></div>
               </div>
             </div>
-            <div className="card-1-content">
-              <h2 className="card-1-more-info">
-                MORE INFO &darr; &#8595; &#x2193; {/* ↓ */}
-              </h2>
+            <div className="card-2-content">
+              <div
+                className={`card-2-more-info card-2-number card-2-number-color-${
+                  index + 1
+                }`}
+              >
+                {index + 1}
+              </div>
               <div className="child">
                 <div className="content">{content}</div>
               </div>
@@ -35,39 +40,41 @@ export default function Cards1() {
         ))}
       </section>
       <div className="limit"></div>
+
       <p>
         Given an <i>Object</i> with the following keys:{" "}
         <i>&#123; title, subtitle, content &#125;</i>
       </p>
+
       <CodeOf type="jsx">{`
 <section className="card-container">
-
-{
-  cards.map(({ title, subtitle, content }, index) => (
-<article key={index} className={\`card card-color-\${index + 1}\`}>
-    <div className="card-1-number">{index + 1}</div>
-    <div className="card-1-header">
-  <div className="card-1-title">
-    <h1>{title}</h1>
-    <i>{subtitle}</i>
-  </div>
-  <div className="card-1-side">
-  <div className="card-1-number-hole"></div>
-  <div className="card-1-placeholder"></div>
-  </div>
+{cards.map(({ title, subtitle, content }, index) => (
+  <article key={index} className={\`card card-color-\${index + 1}\`}>
+    <div className="card-2-number-header">{index + 1}</div>
+    <div className="card-2-header">
+      <div className="card-2-title">
+        <h1>{title}</h1>
+        <i>{subtitle}</i>
+      </div>
+      <div className="card-2-side">
+        <div className="card-2-number-hole"></div>
+        <div className="card-2-placeholder"></div>
+      </div>
     </div>
-      <div className="card-1-content">
-      <h2 className="card-1-more-info">
-        MORE INFO ↓↓↓
-      </h2>
-  <div className='child'>
-    <div className='content'>{content}</div>
-  </div>
+    <div className="card-2-content">
+      <div
+        className={\`card-2-more-info card-2-number card-2-number-color-\${
+          index + 1
+        }\`}
+      >
+        {index + 1}
+      </div>
+      <div className="child">
+        <div className="content">{content}</div>
+      </div>
     </div>
-</article>
-  ))
-}
-
+  </article>
+))}
 </section>
       `}</CodeOf>
 
@@ -134,7 +141,7 @@ export default function Cards1() {
       <p>Here all the other classes for every element inside the cards:</p>
       <p>Header</p>
       <CodeOf type="css">{`
-    .card-1-header {
+    .card-2-header {
       display: grid;
       padding: 0.5rem;
       height: 100%;
@@ -142,9 +149,8 @@ export default function Cards1() {
       grid-template-columns: 1fr 80px;
       grid-template-rows: 1fr;
     }
-    .card-1-title {
+    .card-2-title {
       border-radius: 3px 0 0 0;
-    
       overflow: hidden;
       background: white;
       width: 100%;
@@ -152,26 +158,25 @@ export default function Cards1() {
       padding: 0 1rem;
     }
     
-    .card-1-title h1 {
+    .card-2-title h1 {
       font-size: 1.7rem;
       margin-bottom: 0;
       text-transform: uppercase;
     }
     
-    .card-1-title i {
+    .card-2-title i {
       color: #999;
     }
     `}</CodeOf>
       <p>Side Number</p>
       <CodeOf type="css">{`
-    .card-1-side {
+    .card-2-side {
       display: grid;
       grid-template: 82px auto / 1fr;
     }
     
-    .card-1-number-hole {
+    .card-2-number-hole {
       border-radius: 0 25px 0 0;
-    
       width: 100%;
       height: 100%;
       background: white;
@@ -179,32 +184,33 @@ export default function Cards1() {
       mask-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, white 50%);
     }
     
-    .card-1-placeholder {
+    .card-2-placeholder {
       width: 100%;
       height: 100%;
       background: white;
     }
     
-    .card-1-number {
+    .card-2-number-header {
       position: absolute;
-      right: 50px;
-      top: 36px;
+      right: 50%;
+      top: 50%;
       font-weight: 900;
       font-size: 3rem;
       color: white;
+      opacity: 0;
     
-      transition: all 0.4s ease-out;
-      transition-delay: 0.2s;
+      transition: all 0.2s cubic-bezier(1, 0, 1, 0);
+      transition-delay: 0.05s;
     }
     `}</CodeOf>
       <p>The hidden content</p>
       <CodeOf type="css">{`
-    .card-1-content {
+    .card-2-content {
       position: relative;
-      height: 100%;
-      width: 100%;
+      border-radius: 50%;
+      height: 50%;
+      width: 46%;
       display: grid;
-      padding: 0.5rem;
       grid-template-columns: 1fr;
       overflow: hidden;
       z-index: 1;
@@ -212,7 +218,7 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content .child {
+    .card-2-content .child {
       overflow: scroll;
       border-radius: 0 0 3px 25px;
       background: white;
@@ -223,22 +229,11 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content .child::-webkit-scrollbar {
+    .card-2-content .child::-webkit-scrollbar {
       width: 0;
     }
-    
-    .card-1-content h2 {
-      font-size: 1rem;
-      color: #999;
-      position: absolute;
-      z-index: 10;
-      width: 100%;
-      height: 59px;
-      display: grid;
-      place-items: center;
-    }
-    
-    .card-1-content .child .content {
+     
+    .card-2-content .child .content {
       display: block;
       margin-block-start: 1em;
       margin-block-end: 1em;
@@ -255,18 +250,43 @@ export default function Cards1() {
       transition: all 0.4s ease-out;
     }
     
-    .card-1-content .child .content::first-letter {
+    .card-2-content .child .content::first-letter {
       font-size: 130%;
     }
     `}</CodeOf>
-      <p>The label for the hidden content</p>
+      <p>The label for the hidden content in different colors</p>
       <CodeOf type="css">{`
-    .card-1-more-info {
+    .card-2-more-info {
       opacity: 1;
       transform: translateY(0);
-      transition: all 0.4s ease-out;
+      transition: all 0.2s cubic-bezier(1, 0, 1, 0);
+      transition-delay: 0.05s;
     }
     
+    .card-2-content .card-2-number {
+      position: absolute;
+      font-size: 6rem;
+      font-weight: 900;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .card-2-number-color-1 {
+      color: #e9345c;
+    }
+    .card-2-number-color-2 {
+      color: #ff7eaa;
+    }
+    .card-2-number-color-3 {
+      color: #ffa563;
+    }
+    .card-2-number-color-4 {
+      color: #2859d3;
+    }
+   
     `}</CodeOf>
       <p>And finally, hover effects and responsive media</p>
       <CodeOf type="css">{`
@@ -274,40 +294,43 @@ export default function Cards1() {
       padding: 0;
     }
     
-    .card:hover .card-1-more-info {
-      opacity: 0;
-      transform: translateY(-90px);
-    }
-    
-    .card:hover .card-1-content .child .content {
+    .card:hover .card-2-number-header {
+      right: 35px;
+      top: 21px;
       opacity: 1;
     }
     
-    .card:hover .card-1-number {
-      right: 35px;
-      top: 21px;
+    .card:hover .card-2-content {
+      border-radius: 0;
+      height: 100%;
+      width: 95%;
     }
     
-    .card:hover .card-1-content {
-      height: 111%;
+    .card:hover .card-2-more-info {
+      opacity: 0;
+      transform: translate(60px, -90px);
     }
     
-    .card:hover .card-1-content .child {
-      height: 94%;
+    .card:hover .card-2-content .child .content {
+      opacity: 1;
+    }
+    
+    .card:hover .card-2-content .child {
+      height: 97%;
     }
     
     @media screen and (max-width: 340px) {
-      .card-1-title h1 {
+      .card-2-title h1 {
         font-size: 1.3rem;
       }
     }
     
     `}</CodeOf>
       <div className="more-links">
-        <div></div>
-        <Link href="/projects/cards-2">
-          <a>More Cards &rarr;</a>
+        <Link href="/projects/cards-1">
+          <a>&larr; Previous Cards </a>
         </Link>
+        <div></div>
       </div>
     </ProjectLayout>
   );

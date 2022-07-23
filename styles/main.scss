@@ -3,9 +3,8 @@
 @import "navbar";
 @import "common";
 @import "magic-text-1";
-@import "card";
-//
-@import "responsive";
+@import "card-1";
+@import "card-2";
 
 html,
 body {
@@ -213,3 +212,14 @@ code::-webkit-scrollbar {
     @include text-shadow;
   }
 }
+
+.more-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  div {
+    width: 10px;
+  }
+}
+
+@import "responsive";
