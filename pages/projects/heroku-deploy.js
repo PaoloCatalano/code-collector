@@ -5,9 +5,15 @@ export default function HerokuDeploy() {
   const title = "Deploy projects in Heroku";
   const styledTitle = `-Deploy in Hero|<u-`;
   const desc = "Here the command list for deploying an application to Heroku";
+  const date = "15 Jul 2022";
 
   return (
-    <ProjectLayout title={title} desc={desc} styledTitle={styledTitle}>
+    <ProjectLayout
+      title={title}
+      desc={desc}
+      styledTitle={styledTitle}
+      date={date}
+    >
       <div className="limit"></div>
 
       <p>

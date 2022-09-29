@@ -6,6 +6,8 @@ export default function MagicText1() {
   const title = "Magic Text 1";
   const desc = "Magic text appearing and disappearing using javascript and css";
   const styledTitle = `-Magi<_Text-1-`;
+  const date = "15 Jul 2022";
+
   const text =
     "Λορεμ ιπσθμ δολορ σιτ αμετ, αδ νισλ ειθσ δεσερθισσε εθμ, ιδqθε ιντερεσσετ δελιcατισσιμι νεc cθ. Ηασ δεμοcριτθμ cονσεcτετθερ αν, τιβιqθε μεντιτθμ αccθσαμθσ ετ μελ, νε vιρισ ιντερεσσετ ρεφερρεντθρ ναμ. Περ εα ιπσθμ ομνεσqθε αccομμοδαρε, προ cθ εροσ ρεπθδιαρε πατριοqθε. Cθμ cθ ποστεα γλοριατθρ, πριμισ οπορτεατ Lorem ipsum εα εοσ. Cονσετετθρ vιτθπερατα τε περ, νο σεδ σθσcιπιτ ρεπθδιανδαε. Νεc vερεαρ ινερμισ ηαβεμθσ cθ, εα vελ οδιο αλια, νονθμεσ αδιπισcινγ ιδ ναμ. Cθ vελ ατqθι vιταε μολεστιε, σολθμ νθσqθαμ ιθδιcαβιτ ιν μεα. Ιδ αλιι αργθμεντθμ εαμ. Ιν αγαμ vερι ιμπετθσ δθο, εξ ειθσ περσιθσ αλβθcιθσ περ. Εαμ εθ αθγθε αδιπισcι ασσθεvεριτ, διcιτ δολορε φαστιδιι ατ vελ.".split(
       " "
@@ -47,7 +49,12 @@ export default function MagicText1() {
   }, [checkWindow]);
 
   return (
-    <ProjectLayout title={title} desc={desc} styledTitle={styledTitle}>
+    <ProjectLayout
+      title={title}
+      desc={desc}
+      styledTitle={styledTitle}
+      date={date}
+    >
       <div className="main__description">
         Touch the words and the magic happens
       </div>

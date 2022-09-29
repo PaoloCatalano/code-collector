@@ -5,6 +5,7 @@
 @import "magic-text-1";
 @import "card-1";
 @import "card-2";
+@import "button";
 
 html,
 body {
@@ -141,6 +142,10 @@ code::-webkit-scrollbar {
 }
 
 .main {
+  p {
+    line-height: 26px;
+  }
+
   &__projects {
     padding: 0;
     justify-content: flex-start;
@@ -210,15 +215,6 @@ code::-webkit-scrollbar {
   &__links li {
     margin: 0.9rem 0;
     @include text-shadow;
-  }
-}
-
-.more-links {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  div {
-    width: 10px;
   }
 }
 

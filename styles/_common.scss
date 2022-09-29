@@ -49,3 +49,13 @@
     text-decoration: line-through;
   }
 }
+
+.more-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 2rem 0 4rem;
+  div {
+    width: 10px;
+  }
+}

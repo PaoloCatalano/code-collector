@@ -6,9 +6,15 @@ export default function Cards1() {
   const title = "Cards / Page 1";
   const desc = "Different styles for creating Card Components";
   const styledTitle = `-<ards - 1-`;
+  const date = "23 Jul 2022";
 
   return (
-    <ProjectLayout title={title} desc={desc} styledTitle={styledTitle}>
+    <ProjectLayout
+      title={title}
+      desc={desc}
+      styledTitle={styledTitle}
+      date={date}
+    >
       <section className="card-container">
         {cards.map(({ title, subtitle, content }, index) => (
           <article key={index} className={`card card-color-${index + 1}`}>
