@@ -106,9 +106,19 @@ code::-webkit-scrollbar {
   @include set-colors($jsx, $css);
 }
 
+.tsx,
+.tsx::before {
+  @include set-colors($tsx, $css);
+}
+
 .js,
 .js::before {
   @include set-colors($js, $black);
+}
+
+.ts,
+.ts::before {
+  @include set-colors($ts, $black);
 }
 
 .css,

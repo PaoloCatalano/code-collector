@@ -1,6 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function CodeOf({ children, type }) {
+interface CodeOf {
+  children: string;
+  type:"ts" | "tsx" | "js" | "jsx" | "css" | "scss" | "node" | "cmd";
+}
+
+export default function CodeOf({ children, type }: CodeOf) {
   const [copied, setCopied] = useState(false);
 
   const copyButton = () =>
